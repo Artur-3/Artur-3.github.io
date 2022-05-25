@@ -1,0 +1,19 @@
+#index_span_1 {
+    color: black;
+    font-size: 50px;
+}
+.index_name {
+    display: flex;
+    justify-content:center;
+}
+.index_auctions {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.index_item {
+    background-color: aqua;
+}

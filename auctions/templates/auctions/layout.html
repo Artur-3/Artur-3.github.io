@@ -1,0 +1,35 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <link rel="stylesheet" href="{% static 'auctions/styles_layout.css' %}">
+        {% block head %}
+        
+        {%endblock%}
+    </head>
+    <body>
+        <div class="layout_top_row">
+            <div>
+                <img id="layout_image1" src="{% static 'media/img/images.jpg' %}">
+            </div>
+            <div class="layout_urls">
+                {% if user.is_authenticated %}
+                <a class="layout_a" href="">Активні аукціони</a>
+                <a class="layout_a" href="">Категорії</a>
+                <a class="layout_a" href="">Закінчені аукціони</a>
+                <a class="layout_a" href="">Створити аукціон</a>
+                <a class="layout_a" href="">Список відстеження</a>
+                <a class="layout_a" href="">Вийти</a>
+                {% else %}
+                <a class="layout_a" href="">Активні аукціони</a>
+                <a class="layout_a" href="">Увійти</a>
+                <a class="layout_a" href="">Зареєструватися</a>
+                {% endif %}
+            </div>
+        </div>
+        <hr id="layout_hr">
+        {% block body %}
+        {% endblock %}
+    </body>
+</html>
