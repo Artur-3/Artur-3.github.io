@@ -14,8 +14,21 @@
 <div class="index_auctions">
     {% for item in items %}
     <div class="index_item">
-            <div><img src="/Users/User/AppData/Local/Programs/Python/Python310/Scripts/commerce/auctions/static/media/img/as_0mJtgXq.jpg"></div>
-            {{item.photo}}
+            <div class="index_image">
+                <img class="index_images" src="/static/media/img/{{item.photo}}">
+            </div>
+            <div class="index_item_name">
+                <span class="index_span_name">{{item.name}}</span>
+            </div>
+            <div class="index_item_description">
+                <p class="ps">{{item.description}}</p>
+            </div>
+            <div class="index_item_price">
+                {{item.price}}$
+            </div>
+            <div class="index_item_button">
+                <a class="index_item_buttons" href="{% url 'page' item.name %}" role="button">Детальна інформація</a>
+            </div>
     </div>
     {% endfor %}
 </div>

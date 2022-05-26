@@ -6,6 +6,9 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
 }
+.layout_image_div {
+    width: 13%;
+}
 #layout_image1 {
     height: 3cm;
 }
@@ -18,7 +21,8 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: end;
-    width: 100%;
+    align-items: flex-end;
+    width: 86%;
 }
 
 .layout_a {
